@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <_name>coords</_name>
+    <id>org.inkscape.id</id>
+
+    <dependency type="executable" location="extensions">coords.py</dependency>
+
+    <param name="x" type="float" _gui-text="W-E (x)" min="-180" max="180" >0</param>
+    <param name="y" type="float" _gui-text="S-N (y)" min="-90" max="90" >0</param>
+
+    <effect>
+	<object-type>all</object-type>
+	<effects-menu>
+		<submenu _name="coords"/>
+	</effects-menu>
+    </effect>
+
+    <script>
+        <command reldir="extensions" interpreter="python">coords.py</command>
+    </script>
+</inkscape-extension>
